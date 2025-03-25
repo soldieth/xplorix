@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4B0082;
+  --accent-color: #FF1493;
+  --text-color: #FFFFFF;
+  --error-color: #FF4444;
+  --success-color: #00CA4E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000000 0%, var(--primary-color) 100%);
+  color: var(--text-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #9C27B0, var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-in 0.2s both;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeIn 0.8s ease-in 0.4s both;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success-message {
+  color: var(--success-color);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.error-message {
+  color: var(--error-color);
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50vh;
+  background: linear-gradient(180deg, 
+    rgba(75, 0, 130, 0) 0%,
+    rgba(255, 0, 255, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+} 
