@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --primary-color: #4B0082;
-  --accent-color: #FF1493;
-  --text-color: #FFFFFF;
+  --accent-color: #D8338E;
+  --text-color: #F0F0F0;
   --error-color: #FF4444;
   --success-color: #00CA4E;
+  --background-color: #141414;
 }
 
 * {
@@ -17,12 +20,12 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #000000 0%, var(--primary-color) 100%);
+  background: var(--background-color);
   color: var(--text-color);
 }
 
@@ -37,16 +40,13 @@ body {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, #9C27B0, var(--accent-color));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text-color);
   animation: fadeIn 0.8s ease-in;
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-color);
   margin-bottom: 2rem;
   animation: fadeIn 0.8s ease-in 0.2s both;
 }
